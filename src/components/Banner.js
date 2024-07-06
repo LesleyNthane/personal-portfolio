@@ -3,6 +3,7 @@ import { Col, Container, Row } from "react-bootstrap";
 import { ArrowRightCircle } from "react-bootstrap-icons";
 import headerImage from "../assets/img/header-img.svg";
 
+/* for icons install :npm install react-bootstrap-icons --save */
 export const Banner = () => {
     const [loopNum, setLoopNum] = useState(0);
     const [isDeleting, setIsDeleting] = useState(false);
@@ -47,7 +48,7 @@ export const Banner = () => {
                 <Row className="align-item-center">
                     <Col xs={12} md={6} xl={7}>
                         <span className="tagline">Welcome to my Portfolio</span>
-                        <h1>{`Hi I'm Lesley Nthane`}<span className="wrap">{text}</span></h1>
+                        <h1>{`Hi I'm Lesley Nthane `}<span className="wrap">{text}</span></h1>
                         <p>Paragraph about My self</p>
                         <button onClick={() => console.log('connect')}>Let's connect <ArrowRightCircle size={25} /></button>
 
