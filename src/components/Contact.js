@@ -1,4 +1,5 @@
-7/7\gh'7\/g7\/77\/gh'7\gh'\/gh[=//Ended on 1h:15m:18s
+//Ended on 1h:15m:18s
+/**For mail server install: npm install express cors nodemailer*/
 
 export const Contact = () => {
     const formInitialDetails = {
