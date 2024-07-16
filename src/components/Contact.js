@@ -21,9 +21,25 @@ export const Contact = () => {
         })
     }
 
-    const handleSubmit = () => {
-
-    }
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        setButtonText('Sending...');
+        let response = await fetch("http://localhost:500/contact", {
+            method: "POST",
+            headers: {
+                "Content-Type": "Application/json;charset=utf-8",
+            },
+            body: JSON.stringify(formDetails),
+        });
+        setButtonText("Send");
+        let result = response.json();
+        setFormDetails(formInitialDetails);
+        if (result.code === 200) {
+            setStatus({ success: true, message: 'Message sent succesfully'});
+        } else {
+            setStatus({ success: false, message: 'Something went wront, please try again later.'})
+        }
+    };
 
     return (
         <section className="contact" id="connect">
