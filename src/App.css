@@ -1,4 +1,7 @@
 /* Custom Fonts Import */
+
+/* For Animation add: npm install animate.css --save */
+/* And React on screen module: npm i react-on-screen */
 @font-face {
   font-family: Centra;
   src: url('./assets/font/CentraNo2-Bold.ttf');
