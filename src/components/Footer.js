@@ -16,8 +16,8 @@ export const Footer = () => {
                     </Col>
                     <Col sm={6} className="text-center text-sm-end">
                         <div className="social-icon">
-                            <a href=""><img src={navIcon1} /></a>
-                            <a href=""><img src={navIcon2} /></a>
+                            <a href="https://linkedin.com/in/lesley-nthane-179386274"><img src={navIcon1} /></a>
+                            <a href="https://github.com/LesleyNthane/"><img src={navIcon2} /></a>
                             <a href=""><img src={navIcon3} /></a>
                         </div>
                         <p>CopyRigts 2024. All rights reserved by LesleyNthane</p>
