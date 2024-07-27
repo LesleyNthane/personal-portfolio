@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import { ArrowRightCircle } from "react-bootstrap-icons";
-import headerImage from "../assets/img/header-img.svg";
+import headerImage from "../assets/img/Les-header2.png";
 import 'animate.css';
 import TrackVisibility from "react-on-screen";
 
@@ -53,8 +53,13 @@ export const Banner = () => {
                         {({ isVisible }) => 
                             <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
                                 <span className="tagline">Welcome to my Portfolio</span>
-                                <h1>{`Hi I'm Lesley Nthane `}<span className="wrap">{text}</span></h1>
-                                <p>Paragraph about My self</p>
+                                <h1>{`Hi I'm Lesley Nthane `}<br/><span className="wrap">{text}</span></h1>
+                                <p>My name is Lesley Nthane, a Web developer currently employed at Bona Electronic Solutions as 
+                                    a IT assistant, I am a skilled web developer an soon to be software developer.
+                                    My skills enables me to create great and responsive Frontend, Backend and fullstack websites,
+                                    I am currently working on being able to integrate my web aplications to all Operating systems
+                                    for them to be more responsive and effecient.
+                                </p>
                                 <button onClick={() => console.log('connect')}>Let's connect <ArrowRightCircle size={25} /></button>
                             </div>}
                         </TrackVisibility>
