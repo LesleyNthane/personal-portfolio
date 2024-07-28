@@ -54,13 +54,14 @@ export const Banner = () => {
                             <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
                                 <span className="tagline">Welcome to my Portfolio</span>
                                 <h1>{`Hi I'm Lesley Nthane `}<br/><span className="wrap">{text}</span></h1>
-                                <p>My name is Lesley Nthane, a Web developer currently employed at Bona Electronic Solutions as 
-                                    a IT assistant, I am a skilled web developer an soon to be software developer.
-                                    My skills enables me to create great and responsive Frontend, Backend and fullstack websites,
-                                    I am currently working on being able to integrate my web aplications to all Operating systems
-                                    for them to be more responsive and effecient.
+                                <p>
+                                    My name is Lesley Nthane, and I am a web developer currently employed as an IT Assistant 
+                                    at Bona Electronic Solutions. I am a proficient web developer with aspirations to become 
+                                    a software developer. My skills enable me to create responsive and high-quality frontend, 
+                                    backend, and full-stack websites. I am currently working on integrating my web applications 
+                                    across all operating systems to enhance their responsiveness and efficiency.
                                 </p>
-                                <button onClick={() => console.log('connect')}>Let's connect <ArrowRightCircle size={25} /></button>
+                                <a href="#connect"><button onClick={() => console.log('connect')}>Let's connect <ArrowRightCircle size={25} /></button></a>
                             </div>}
                         </TrackVisibility>
                     </Col>

@@ -6,6 +6,7 @@ import { Skills } from './components/Skills';
 import { Footer } from './components/Footer';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Projects } from './components/Projects';
+import { Contact } from './components/Contact';
 
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
       <Banner />
       <Skills />
       <Projects />
+      <Contact />
       <Footer />
     </div>
   );

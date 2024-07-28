@@ -37,7 +37,13 @@ export const Skills = () => {
                             <h2>
                                 Skills
                             </h2>
-                            <p>Put Paragraph here</p>
+                            <p>
+                                The skills outlined in this section were acquired through a combination of my academic 
+                                coursework at VUT, professional experience at Bona, and self-directed learning during 
+                                my free time. The foundational knowledge gained from my academic studies was further 
+                                refined and matured through practical application in the workplace and ongoing 
+                                self-education and research.
+                            </p>
                             <Carousel responsive={responsive} infinite={true} className="skill-slider">
                                 <div className="item">
                                     <img src={meter1} alt="Image" />
@@ -52,15 +58,19 @@ export const Skills = () => {
                                     <h5>Networking</h5>
                                 </div>
                                 <div className="item">
-                                    <img src={meter1} alt="Image" />
-                                    <h5>Web Developer</h5>
+                                    <img src={meter2} alt="Image" />
+                                    <h5>Web Design</h5>
+                                </div>
+                                <div className="item">
+                                    <img src={meter2} alt="Image" />
+                                    <h5>Website deployment</h5>
                                 </div>
                             </Carousel>
                         </div>
                     </Col>
                 </Row>
             </Container>
-            <img className="backgroup-image-left" src={colorSharp} />
+            
         </section>
     )
 }

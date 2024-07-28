@@ -1,3 +1,9 @@
+import { useState } from "react";
+import { Container, Row, Col } from "react-bootstrap";
+import contactImg from "../assets/img/contact-img.svg";
+import 'animate.css';
+import TrackVisibility from 'react-on-screen';
+
 //Ended on 1h:15m:18s
 /**For mail server install: npm install express cors nodemailer*/
 
@@ -21,23 +27,33 @@ export const Contact = () => {
         })
     }
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
         setButtonText('Sending...');
-        let response = await fetch("http://localhost:500/contact", {
-            method: "POST",
-            headers: {
-                "Content-Type": "Application/json;charset=utf-8",
-            },
-            body: JSON.stringify(formDetails),
-        });
-        setButtonText("Send");
-        let result = response.json();
-        setFormDetails(formInitialDetails);
-        if (result.code === 200) {
-            setStatus({ success: true, message: 'Message sent succesfully'});
-        } else {
-            setStatus({ success: false, message: 'Something went wront, please try again later.'})
+        
+        try {
+            let response = await fetch("http://localhost:500/contact", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json;charset=utf-8",
+                },
+                body: JSON.stringify(formDetails),
+            });
+            
+            setButtonText("Send");
+            let result = await response.json();
+    
+            setFormDetails(formInitialDetails);
+    
+            if (response.ok) {
+                setStatus({ success: true, message: 'Message sent successfully' });
+            } else {
+                setStatus({ success: false, message: 'Something went wrong, please try again later.' });
+            }
+        } catch (error) {
+            setButtonText("Send");
+            setStatus({ success: false, message: 'Something went wrong, please try again later.' });
+            console.error("Error:", error);
         }
     };
 
