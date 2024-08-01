@@ -45,8 +45,13 @@ export const Contact = () => {
           body: json
         }).then((res) => res.json());
     
+        setFormDetails(formInitialDetails);
+
         if (res.success) {
           console.log("Success", res);
+          setStatus({ success: true, message: 'Message sent successfully' });
+        }else {
+            setStatus({ success: false, message: 'Something went wrong, please try again later.' });
         }
       };
 
