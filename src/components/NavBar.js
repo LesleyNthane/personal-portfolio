@@ -56,7 +56,7 @@ export const NavBar = ()=> {
             <div className="social-icon">
                 <a href="https://linkedin.com/in/lesley-nthane-179386274"><img src={navIcon1} alt="LinkedIn Icon" /></a>
                 <a href="https://github.com/LesleyNthane/"><img src={navIcon2} alt="Github Icon" /></a>
-                <a href="#"><img src={navIcon3} alt="" /></a>
+                <a href="https://x.com/lesley_nthane"><img src={navIcon3} alt="" /></a>
             </div>
             <a href="#connect"><button className="vvd" onClick={() => console.log('connect')}><span>Let's Connect</span></button></a>
           </span>
